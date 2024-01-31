@@ -27,10 +27,15 @@ export type QuizAction = {
   type: actionType.CLEAR_QUIZ;
 } | {
   type: actionType.REMOVE_OPTION;
+  idQuestion: number; // id otázky
+  id: number; // id odpovědi
 } | {
   type: actionType.REMOVE_QUESTION;
+  id: number; // id otázky
 } | {
   type: actionType.SWITCH_CORRECT_OPTION;
+  idQuestion: number; // id otázky
+  id: number; // id nové správné odpovědi
 }
 
 const reducer = (state: QuizType, action: QuizAction) => {
